@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPlzZYqv1pqutPahorQWmnr",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/iannnnjaja/primera-clase/blob/main/Examen%20programaci%C3%B3n%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "19913f90"
+      },
+      "source": [
+        "a = int(input(\"Introduce el primer número: \"))\n",
+        "b = int(input(\"Introduce el segundo número: \"))\n",
+        "c = int(input(\"Introduce el tercer número: \"))\n",
+        "\n",
+        "print(\"Números ordenados de menor a mayor\")\n",
+        "\n",
+        "if a <= b and a <= c:\n",
+        "    if b <= c:\n",
+        "        print(a, b, c)\n",
+        "    else:\n",
+        "        print(a, c, b)\n",
+        "elif b <= a and b <= c:\n",
+        "    if a <= c:\n",
+        "        print(b, a, c)\n",
+        "    else:\n",
+        "        print(b, c, a)\n",
+        "else:\n",
+        "    if a <= b:\n",
+        "        print(c, a, b)\n",
+        "    else:\n",
+        "        print(c, b, a)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#escribir un programa para mostrar mediante bucles los codigos ascii de las letras mayusculas y minusculas\n",
+        "\n",
+        "print(\"Códigos ASCII para letras mayúsculas:\")\n",
+        "for i in range(ord('A'), ord('Z') + 1):\n",
+        "    print(f\"Letra: {chr(i)}, ASCII: {i}\")\n",
+        "\n",
+        "    print(\"\\nCódigos ASCII para letras minúsculas:\")\n",
+        "    for i in range(ord('a'), ord('z') + 1):\n",
+        "        print(f\"Letra: {chr(i)}, ASCII: {i}\")"
+      ],
+      "metadata": {
+        "id": "MP3RlgUaCxCu"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
