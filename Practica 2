@@ -1,0 +1,129 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMjT7XZfn5qgT8ebvF1Ng5Z",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/iannnnjaja/primera-clase/blob/main/Practica%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "pdAVT1tjX1E7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "class Persona:\n",
+        "\n",
+        "    def __init__(self, nombre=\"\", edad=0, direccion=\"\"):\n",
+        "        self.nombre = nombre\n",
+        "        self.edad = edad\n",
+        "        self.direccion = direccion\n",
+        "\n",
+        "\n",
+        "    def imprime(self):\n",
+        "        print(\"Nombre:\", self.nombre)\n",
+        "        print(\"Edad:\", self.edad)\n",
+        "        print(\"Dirección:\", self.direccion)\n",
+        "\n",
+        "\n",
+        "class Cliente(Persona):\n",
+        "\n",
+        "    def __init__(self, nombre=\"\", edad=0, direccion=\"\", numCliente=0, cel=0, servicio=\"\"):\n",
+        "        super().__init__(nombre, edad, direccion)\n",
+        "        self.numCliente = numCliente\n",
+        "        self.cel = cel\n",
+        "        self.servicio = servicio\n",
+        "\n",
+        "\n",
+        "    def imprime(self):\n",
+        "        super().imprime()\n",
+        "        print(\"NumCliente:\", self.numCliente)\n",
+        "        print(\"Cel:\", self.cel)\n",
+        "        print(\"Servicio:\", self.servicio)\n",
+        "\n",
+        "\n",
+        "print(\"--- Registro de Cliente ---\")\n",
+        "nombre = input(\"Ingresa el nombre: \")\n",
+        "edad = int(input(\"Ingresa la edad: \"))\n",
+        "direccion = input(\"Ingresa la dirección: \")\n",
+        "numCliente = input(\"Ingresa el número de cliente: \")\n",
+        "cel = int(input(\"Ingresa el celular: \"))\n",
+        "servicio = input(\"Ingresa el servicio: \")\n",
+        "\n",
+        "\n",
+        "cliente1 = Cliente(nombre, edad, direccion, numCliente, cel, servicio)\n",
+        "\n",
+        "\n",
+        "print(\"\\nDATOS DEL CLIENTE\")\n",
+        "cliente1.imprime()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xn_mjOXaXKlI",
+        "outputId": "4b7c42a0-b73a-4e0e-f19c-b8b0961ea093"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--- Registro de Cliente ---\n",
+            "Ingresa el nombre: Ian Quintero \n",
+            "Ingresa la edad: 18\n",
+            "Ingresa la dirección: Cdmx\n",
+            "Ingresa el número de cliente: 67\n",
+            "Ingresa el celular: 551781\n",
+            "Ingresa el servicio: Internet \n",
+            "\n",
+            "DATOS DEL CLIENTE\n",
+            "Nombre: Ian Quintero \n",
+            "Edad: 18\n",
+            "Dirección: Cdmx\n",
+            "NumCliente: 67\n",
+            "Cel: 551781\n",
+            "Servicio: Internet \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "P_XPUQx7XqCg"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
